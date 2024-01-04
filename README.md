@@ -1,7 +1,29 @@
 # How to Build Walmart Price Tracker With Python
+
 Follow this guide to learn how to track prices and availability of your desired Walmart products, and how to set up email alerts with the latest product and price change data.
 
 See the [full blog post](https://oxylabs.io/blog/walmart-price-tracker) for comprehensive explanations about each step.
+
+- [1. Install libraries](#1-install-libraries)
+- [2. Import libraries](#2-import-libraries)
+- [3. Inspect elements to prepare XPaths](#3-inspect-elements-to-prepare-xpaths)
+  * [Title](#title)
+  * [Price](#price)
+  * [Product link](#product-link)
+- [4. Fetch Walmart category data](#4-fetch-walmart-category-data)
+  * [Set API credentials](#set-api-credentials)
+  * [Prepare parsing instructions](#prepare-parsing-instructions)
+  * [Prepare payload](#prepare-payload)
+  * [Send a POST request](#send-a-post-request)
+- [5. Track Walmart price history](#5-track-walmart-price-history)
+  * [Load history data](#load-history-data)
+  * [Track Walmart price changes and new products](#track-walmart-price-changes-and-new-products)
+  * [Save history data](#save-history-data)
+- [6. Create a price alert](#6-create-a-price-alert)
+  * [Configuration](#configuration)
+  * [Compose email](#compose-email)
+  * [Send email](#send-email)
+- [7. Full source code](#7-full-source-code)
 
 ## 1. Install libraries
 ```bash
@@ -104,7 +126,7 @@ print(response.status_code)
 pprint(response.json())
 ```
 
-## 5. Track Walmart’s price history
+## 5. Track Walmart price history
 ### Load history data
 ```python
 history = {}
