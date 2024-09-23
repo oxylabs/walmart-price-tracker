@@ -110,7 +110,7 @@ url = "https://www.walmart.com/cp/electronics/3944"
 
 
 payload = {
-   "source": "universal_ecommerce",
+   "source": "universal",
    "url": url,
    "parse": True,
    "parsing_instructions": parsing_instructions,
@@ -260,7 +260,7 @@ parsing_instructions = {
 }
 
 payload = {
-   "source": "universal_ecommerce",
+   "source": "universal",
    "url": url,
    "parse": True,
    "parsing_instructions": parsing_instructions,
